@@ -1,7 +1,9 @@
-mas = [int(x) for x in input().split()]
-print(mas)
-print(min(mas))
-res = [i for i, j in enumerate(mas) if j == min(mas)]
+import sys
+print((sys.argv))
+
+print(min(sys.argv))
+y = sys.argv
+res = [i for i, j in enumerate(y) if j == min(y)]
 print(res)
-print(*filter(lambda x : x > 0, mas))
-print(*filter(lambda x : x < 0, mas))
+print (*filter(lambda x: x >= '0', y))
+print (*filter(lambda x: x < '0', y))
